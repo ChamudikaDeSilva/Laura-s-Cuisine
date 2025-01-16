@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Taste.it - Free Bootstrap 4 Template by Colorlib</title>
+	<title>Laura's Cuisine - Free Bootstrap 4 Template by Colorlib</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -26,7 +26,7 @@
 		<div class="container">
 			<div class="row justify-content-between">
 				<div class="col-12 col-md d-flex align-items-center">
-					<p class="mb-0 phone"><span class="mailus">Phone no:</span> <a href="#">+00 1234 567</a> or <span class="mailus">email us:</span> <a href="#">emailsample@email.com</a></p>
+					<p class="mb-0 phone"><span class="mailus">Phone no:</span> <a href="#">+94 81 223 4569</a> or <span class="mailus">email us:</span> <a href="#">lauras@gmail.com</a></p>
 				</div>
 				<div class="col-12 col-md d-flex justify-content-md-end">
 					<p class="mb-0">Mon - Fri / 9:00-21:00, Sat - Sun / 10:00-20:00</p>
@@ -45,21 +45,23 @@
 	
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">Taste.<span>it</span></a>
+			<a class="navbar-brand" href="index.html">Laura's<span>Cuisine</span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-					<li class="nav-item"><a href="chef.html" class="nav-link">Chef</a></li>
-					<li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
-					<li class="nav-item"><a href="reservation.html" class="nav-link">Reservation</a></li>
-					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+					<li class="nav-item"><a th:href="@{/}" class="nav-link">Home</a></li>
+					<li class="nav-item"><a th:href="@{/about}" class="nav-link">About</a></li>
+					<li class="nav-item"><a th:href="@{/chef}" class="nav-link">Chef</a></li>
+					<li class="nav-item"><a th:href="@{/menu}" class="nav-link">Menu</a></li>
+					<li class="nav-item"><a th:href="@{/reservation}" class="nav-link">Reservation</a></li>
+					<li class="nav-item"><a th:href="@{/blog}" class="nav-link">Blog</a></li>
+					<li class="nav-item"><a th:href="@{/contact}" class="nav-link">Contact</a></li>
+
 				</ul>
+				
 			</div>
 		</div>
 	</nav>
@@ -73,9 +75,9 @@
 					<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
 						<div class="col-md-12 ftco-animate">
 							<div class="text w-100 mt-5 text-center">
-								<span class="subheading">Taste.it Restaurant</h2></span>
+								<span class="subheading">Laura's Cuisine</h2></span>
 								<h1>Cooking Since</h1>
-								<span class="subheading-2">1958</span>
+								<span class="subheading-2">2025</span>
 							</div>
 						</div>
 					</div>
@@ -88,7 +90,7 @@
 					<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
 						<div class="col-md-12 ftco-animate">
 							<div class="text w-100 mt-5 text-center">
-								<span class="subheading">Taste.it Restaurant</h2></span>
+								<span class="subheading">Laura's Cuisine</h2></span>
 								<h1>Best Quality</h1>
 								<span class="subheading-2 sub">Food</span>
 							</div>
@@ -170,11 +172,15 @@
 							<div class="heading-section mt-5 mb-4">
 								<div class="pl-lg-3 ml-md-5">
 									<span class="subheading">About</span>
-									<h2 class="mb-4">Welcome to Taste.it</h2>
+									<h2 class="mb-4">Welcome to Laura's Cuisine</h2>
 								</div>
 							</div>
 							<div class="pl-lg-3 ml-md-5">
-								<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+								<p>Welcome to Laura's Cuisine, where every dish tells a story. Nestled in the heart of a vibrant neighborhood,
+									 we offer a culinary experience that blends tradition with innovation. Our chefs craft each meal using the freshest ingredients,
+									  creating flavors that are as bold as they are memorable. Whether you're here for a quick bite or a leisurely evening, our cozy ambiance
+									   and attentive service promise an unforgettable dining experience.
+									 Let us take you on a gastronomic journey that celebrates the art of good food and great company.</p>
 							</div>
 						</div>
 					</div>
@@ -536,7 +542,7 @@
 						<div class="item">
 							<div class="testimony-wrap text-center">
 								<div class="text p-3">
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p class="mb-4">Food & Customer Service were awesome.</p>
 									<div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
 										<span class="quote d-flex align-items-center justify-content-center">
 											<i class="fa fa-quote-left"></i>
@@ -550,7 +556,7 @@
 						<div class="item">
 							<div class="testimony-wrap text-center">
 								<div class="text p-3">
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p class="mb-4">Heavenly Taste.</p>
 									<div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
 										<span class="quote d-flex align-items-center justify-content-center">
 											<i class="fa fa-quote-left"></i>
@@ -564,7 +570,7 @@
 						<div class="item">
 							<div class="testimony-wrap text-center">
 								<div class="text p-3">
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p class="mb-4">Food was amazing. A better place for a relaxation.</p>
 									<div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
 										<span class="quote d-flex align-items-center justify-content-center">
 											<i class="fa fa-quote-left"></i>
@@ -578,7 +584,7 @@
 						<div class="item">
 							<div class="testimony-wrap text-center">
 								<div class="text p-3">
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p class="mb-4">Food was amazing. A better place for a relaxation.</p>
 									<div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
 										<span class="quote d-flex align-items-center justify-content-center">
 											<i class="fa fa-quote-left"></i>
@@ -592,7 +598,7 @@
 						<div class="item">
 							<div class="testimony-wrap text-center">
 								<div class="text p-3">
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p class="mb-4">The staff is friendly and the food was amazing.</p>
 									<div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
 										<span class="quote d-flex align-items-center justify-content-center">
 											<i class="fa fa-quote-left"></i>
@@ -705,8 +711,11 @@
 					<div class="heading-section ftco-animate mb-5">
 						<span class="subheading">This is our secrets</span>
 						<h2 class="mb-4">Perfect Ingredients</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-						</p>
+						<p>Perfect ingredients are the heart and soul of every exceptional dish. Fresh, vibrant, and sourced with care, 
+							they tell a story of their origin. Crisp vegetables bursting with color, tender cuts of meat, aromatic herbs, 
+							and spices that awaken the senses — each element is chosen for its purity, flavor, and quality. Perfect ingredients are nature’s finest gifts, thoughtfully selected
+							 to create 
+							dishes that delight the palate and nourish the soul. They transform a simple recipe into an extraordinary culinary masterpiece.</p>
 						<p><a href="#" class="btn btn-primary">Learn more</a></p>
 					</div>
 				</div>
@@ -732,7 +741,7 @@
 								<div><a href="#">August 3, 2020</a></div>
 								<div><a href="#">Admin</a></div>
 							</div>
-							<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+							<h3 class="heading"><a href="#">Discover the art of blending flavors with our chef's secrets to creating unforgettable dishes.</a></h3>
 							<p class="clearfix">
 								<a href="#" class="float-left read btn btn-primary">Read more</a>
 								<a href="#" class="float-right meta-chat"><span class="fa fa-comment"></span> 3</a>
@@ -749,7 +758,7 @@
 								<div><a href="#">August 3, 2020</a></div>
 								<div><a href="#">Admin</a></div>
 							</div>
-							<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+							<h3 class="heading"><a href="#">Explore the journey of fresh ingredients from farm to table in every bite you savor.</a></h3>
 							<p class="clearfix">
 								<a href="#" class="float-left read btn btn-primary">Read more</a>
 								<a href="#" class="float-right meta-chat"><span class="fa fa-comment"></span> 3</a>
@@ -766,7 +775,7 @@
 								<div><a href="#">August 3, 2020</a></div>
 								<div><a href="#">Admin</a></div>
 							</div>
-							<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+							<h3 class="heading"><a href="#">Celebrate the joy of cooking with recipes that bring people together, one plate at a time.</a></h3>
 							<p class="clearfix">
 								<a href="#" class="float-left read btn btn-primary">Read more</a>
 								<a href="#" class="float-right meta-chat"><span class="fa fa-comment"></span> 3</a>
@@ -794,7 +803,7 @@
 			<div class="row mb-5">
 				<div class="col-md-6 col-lg-3">
 					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Taste.it</h2>
+						<h2 class="ftco-heading-2">Laura's Cuisine</h2>
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
 						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
 							<li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
@@ -857,7 +866,7 @@
 				<div class="col-md-12 text-center">
 
 					<p class="mb-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Chamudika</a>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 					</div>
 				</div>
