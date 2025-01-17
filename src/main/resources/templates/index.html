@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Laura's Cuisine - Free Bootstrap 4 Template by Colorlib</title>
+	<title>Laura's Cuisine</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- Local CSS -->
     <link th:href="@{/css/animate.css}" rel="stylesheet">
     <link th:href="@{/css/owl.carousel.min.css}" rel="stylesheet">
@@ -19,6 +19,22 @@
     <link th:href="@{/css/jquery.timepicker.css}" rel="stylesheet">
     <link th:href="@{/css/flaticon.css}" rel="stylesheet">
     <link th:href="@{/css/style.css}" rel="stylesheet">
+
+	<style>
+		.service-item {
+			height: 100%;
+		}
+	
+		.hover-danger:hover {
+			background-color: #dc3545 !important; 
+			color: white !important; 
+			transition: all 0.3s ease-in-out;
+		}
+	
+		.hover-danger:hover i {
+			color: white !important;
+		}
+	</style>
 </head>
 <body>
 
@@ -69,7 +85,7 @@
 	
 	<section class="hero-wrap">
 		<div class="home-slider owl-carousel js-fullheight">
-			<div class="slider-item js-fullheight" style="background-image:url(images/bg_1.jpg);">
+			<div class="slider-item js-fullheight" style="background-image:url(images/food-res1.jpg);">
 				<div class="overlay"></div>
 				<div class="container">
 					<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
@@ -84,7 +100,7 @@
 				</div>
 			</div>
 
-			<div class="slider-item js-fullheight" style="background-image:url(images/bg_2.jpg);">
+			<div class="slider-item js-fullheight" style="background-image:url(images/food-res2.jpg);">
 				<div class="overlay"></div>
 				<div class="container">
 					<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
@@ -98,89 +114,16 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
 
-	
-
-	<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt">
-		<div class="container">
-			<div class="row no-gutters">
-				<div class="col-sm-4 p-4 p-md-5 d-flex align-items-center justify-content-center bg-primary">
-					<form action="#" class="appointment-form">
-						<h3 class="mb-3">Book your Table</h3>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="form-group">
-									<input type="name" class="form-control" placeholder="Name">
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<input type="email" class="form-control" placeholder="Email">
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Phone">
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<div class="input-wrap">
-										<div class="icon"><span class="fa fa-calendar"></span></div>
-										<input type="text" class="form-control book_date" placeholder="Check-In">
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<div class="input-wrap">
-										<div class="icon"><span class="fa fa-clock-o"></span></div>
-										<input type="text" class="form-control book_time" placeholder="Time">
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<div class="form-field">
-										<div class="select-wrap">
-											<div class="icon"><span class="fa fa-chevron-down"></span></div>
-											<select name="" id="" class="form-control">
-												<option value="">Guest</option>
-												<option value="">1</option>
-												<option value="">2</option>
-												<option value="">3</option>
-												<option value="">4</option>
-												<option value="">5</option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<input type="submit" value="Book Your Table Now" class="btn btn-white py-3 px-4">
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
-				<div class="col-sm-8 wrap-about py-5 ftco-animate img" style="background-image: url(images/about.jpg);">
-					<div class="row pb-5 pb-md-0">
-						<div class="col-md-12 col-lg-7">
-							<div class="heading-section mt-5 mb-4">
-								<div class="pl-lg-3 ml-md-5">
-									<span class="subheading">About</span>
-									<h2 class="mb-4">Welcome to Laura's Cuisine</h2>
-								</div>
-							</div>
-							<div class="pl-lg-3 ml-md-5">
-								<p>Welcome to Laura's Cuisine, where every dish tells a story. Nestled in the heart of a vibrant neighborhood,
-									 we offer a culinary experience that blends tradition with innovation. Our chefs craft each meal using the freshest ingredients,
-									  creating flavors that are as bold as they are memorable. Whether you're here for a quick bite or a leisurely evening, our cozy ambiance
-									   and attentive service promise an unforgettable dining experience.
-									 Let us take you on a gastronomic journey that celebrates the art of good food and great company.</p>
+			<div class="slider-item js-fullheight" style="background-image:url(images/food-res3.jpg);">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+						<div class="col-md-12 ftco-animate">
+							<div class="text w-100 mt-5 text-center">
+								<span class="subheading">Laura's Cuisine</h2></span>
+								<h1>High Quality</h1>
+								<span class="subheading-2 sub">Customer service</span>
 							</div>
 						</div>
 					</div>
@@ -189,7 +132,42 @@
 		</div>
 	</section>
 
-	<section class="ftco-section ftco-intro" style="background-image: url(images/bg_3.jpg);">
+	
+
+	<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt">
+		<div class="container-fluid">
+			<div class="row no-gutters">
+				<!-- Image Section -->
+				<div class="col-sm-4 px-4">
+					<div class="img" style="background-image: url('images/chef-new.jpg'); height: 100%; background-size: cover; background-position: center;"></div>
+				</div>
+				<!-- Text Section -->
+				<div class="col-sm-8 wrap-about py-5 ftco-animate">
+					<div class="row pb-5 pb-md-0">
+						<div class="col-md-9 p-5">
+							<div class="heading-section mt-5 mb-4">
+								<div>
+									<span class="subheading">About</span>
+									<h2 class="mb-4">Welcome to Laura's Cuisine</h2>
+								</div>
+							</div>
+							<div>
+								<p>Welcome to Laura's Cuisine, where every dish tells a story. Nestled in the heart of a vibrant neighborhood,
+									we offer a culinary experience that blends tradition with innovation. Our chefs craft each meal using the freshest ingredients,
+									creating flavors that are as bold as they are memorable. Whether you're here for a quick bite or a leisurely evening, our cozy ambiance
+									and attentive service promise an unforgettable dining experience.
+									Let us take you on a gastronomic journey that celebrates the art of good food and great company.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+
+	<section class="ftco-section ftco-intro" style="background-image: url(images/restaurant1.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -615,91 +593,6 @@
 		</div>
 	</section>
 	
-	<section class="ftco-section bg-light">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-2">
-				<div class="col-md-7 text-center heading-section ftco-animate">
-					<span class="subheading">Chef</span>
-					<h2 class="mb-4">Our Master Chef</h2>
-				</div>
-			</div>	
-			<div class="row">
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="staff">
-						<div class="img" style="background-image: url(images/chef-4.jpg);"></div>
-						<div class="text px-4 pt-2">
-							<h3>John Gustavo</h3>
-							<span class="position mb-2">CEO, Co Founder</span>
-							<div class="faded">
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-								<ul class="ftco-social d-flex">
-									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="staff">
-						<div class="img" style="background-image: url(images/chef-2.jpg);"></div>
-						<div class="text px-4 pt-2">
-							<h3>Michelle Fraulen</h3>
-							<span class="position mb-2">Head Chef</span>
-							<div class="faded">
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-								<ul class="ftco-social d-flex">
-									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="staff">
-						<div class="img" style="background-image: url(images/chef-3.jpg);"></div>
-						<div class="text px-4 pt-2">
-							<h3>Alfred Smith</h3>
-							<span class="position mb-2">Chef Cook</span>
-							<div class="faded">
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-								<ul class="ftco-social d-flex">
-									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="staff">
-						<div class="img" style="background-image: url(images/chef-1.jpg);"></div>
-						<div class="text px-4 pt-2">
-							<h3>Antonio Santibanez</h3>
-							<span class="position mb-2">Chef Cook</span>
-							<div class="faded">
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-								<ul class="ftco-social d-flex">
-									<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
 		<div class="container">
 			<div class="row d-flex">
@@ -787,6 +680,59 @@
 		</div>
 	</section>
 
+	<section class="ftco-section bg-gray py-5">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-7 text-center heading-section ftco-animate">
+					<span class="subheading">Services</span>
+					<h2 class="mb-4">What we offer</h2>
+				</div>
+			</div>
+			<div class="row g-4">
+				<!-- Expert Chefs -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="service-item rounded pt-3 text-center shadow-sm bg-primary h-100 hover-danger">
+						<div class="p-4">
+							<i class=" fa fa-3x fa-solid fa-user-tie text-white mb-3"></i>
+							<h5>Expert Chefs</h5>
+							<p class="text-white">Our chefs are seasoned professionals with years of experience crafting exceptional dishes.</p>
+						</div>
+					</div>
+				</div>
+				<!-- Fresh Ingredients -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="service-item rounded pt-3 text-center shadow-sm bg-primary h-100 hover-danger">
+						<div class="p-4">
+							<i class="fa fa-3x fa-seedling text-white mb-3"></i>
+							<h5>Fresh Ingredients</h5>
+							<p class="text-white">We source the freshest ingredients to create dishes bursting with flavor.</p>
+						</div>
+					</div>
+				</div>
+				<!-- Cozy Ambiance -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="service-item rounded pt-3 text-center shadow-sm bg-primary h-100 hover-danger">
+						<div class="p-4">
+							<i class="fa fa-3x fa-couch text-white mb-3"></i>
+							<h5>Cozy Ambiance</h5>
+							<p class="text-white">Relax and enjoy a warm, inviting atmosphere while you dine.</p>
+						</div>
+					</div>
+				</div>
+				<!-- Friendly Service -->
+				<div class="col-lg-3 col-sm-6">
+					<div class="service-item rounded pt-3 text-center shadow-sm bg-primary h-100 hover-danger">
+						<div class="p-4">
+							<i class="fa fa-3x fa-hands-helping text-white mb-3"></i>
+							<h5>Friendly Service</h5>
+							<p class="text-white">Our staff is dedicated to making your dining experience truly delightful.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-intro bg-primary">
 		<div class="container py-5">
 			<div class="row py-2">
