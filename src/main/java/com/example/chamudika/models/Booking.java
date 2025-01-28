@@ -1,79 +1,86 @@
 package com.example.chamudika.models;
 
-import java.util.List;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.*;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import java.util.Objects;
 
 @Entity
-
-@jakarta.persistence.Table(name="bookings")
+@Table(name = "bookings")
 public class Booking {
+    
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-   
-    private int user_id;
-    private int table_id;
-    private String code;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Table> tables;
+    @ManyToOne
+    @JoinColumn(name = "table_id", nullable = false)
+    private DiningTable diningTable;
 
-    public Booking (){
+    @Column(name = "code", nullable = false, unique = true)
+    private String code;
 
-    }
-    
-    public Booking(int id, int user_id, int table_id, String code)
-    {
-        this.id=id;
-        this.user_id=user_id;
-        this.table_id=table_id;
-        this.code=code;
+    // Default Constructor
+    public Booking() {
     }
 
+    // Parameterized Constructor
+    public Booking(int id, User user, DiningTable diningTable, String code) {
+        this.id = id;
+        this.user = user;
+        this.diningTable = diningTable;
+        this.code = code;
+    }
+
+    // Getters and Setters
     public int getId() {
         return id;
     }
-    
+
     public void setId(int id) {
         this.id = id;
     }
-    
-    public int getCustomer_id() {
-        return user_id;
+
+    public User getUser() {
+        return user;
     }
-    
-    public void setCustomer_id(int user_id) {
-        this.user_id = user_id;
+
+    public void setUser(User user) {
+        this.user = user;
     }
-    
-    public int getTable_id() {
-        return table_id;
+
+    public DiningTable getDiningTable() {
+        return diningTable;
     }
-    
-    public void setTable_id(int table_id) {
-        this.table_id = table_id;
+
+    public void setDiningTable(DiningTable diningTable) {
+        this.diningTable = diningTable;
     }
-    
+
     public String getCode() {
         return code;
     }
-    
+
     public void setCode(String code) {
         this.code = code;
     }
 
-    
-    
+    // Override equals and hashCode for proper comparison
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Booking booking = (Booking) o;
+        return id == booking.id &&
+                Objects.equals(user, booking.user) &&
+                Objects.equals(diningTable, booking.diningTable) &&
+                Objects.equals(code, booking.code);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, user, diningTable, code);
+    }
 }

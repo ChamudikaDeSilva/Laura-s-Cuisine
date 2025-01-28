@@ -11,7 +11,7 @@ import jakarta.persistence.ManyToOne;
 
 @Entity
 @jakarta.persistence.Table (name="tables")
-public class Table {
+public class DiningTable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private int id;
@@ -26,11 +26,11 @@ public class Table {
     @JoinColumn(name = "table_id", referencedColumnName = "id")
     private Booking booking;
 
-    public Table()
+    public DiningTable()
     {
 
     }
-    public Table(int id, String name, int user_count)
+    public DiningTable(int id, String name, int user_count)
     {
         this.id=id;
         this.name=name;
