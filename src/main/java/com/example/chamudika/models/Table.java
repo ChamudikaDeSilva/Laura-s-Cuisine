@@ -1,9 +1,30 @@
 package com.example.chamudika.models;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
+
+@Entity
+@jakarta.persistence.Table (name="tables")
 public class Table {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private int id;
+
+    @Column(name = "name", nullable = false)
     private String name;
+
+    @Column(name = "user_count", nullable = false)
     private int user_count;
+
+    @ManyToOne
+    @JoinColumn(name = "table_id", referencedColumnName = "id")
+    private Booking booking;
 
     public Table()
     {

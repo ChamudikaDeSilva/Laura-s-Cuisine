@@ -1,14 +1,19 @@
 package com.example.chamudika.models;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.*;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity
 
+@jakarta.persistence.Table(name="bookings")
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
@@ -21,6 +26,9 @@ public class Booking {
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
+
+    @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Table> tables;
 
     public Booking (){
 
