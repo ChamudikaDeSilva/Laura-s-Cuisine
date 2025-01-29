@@ -2,11 +2,12 @@ package com.example.chamudika.models;
 
 import jakarta.persistence.*;
 import java.util.List;
-import jakarta.persistence.Table;
+
 
 @Entity
 
 @Table(name = "users")
+
 public class User {
 
     @Id
@@ -19,7 +20,7 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "role_id", insertable = false, updatable = false,nullable = false)
+    @Column(name = "role_id", insertable = true, updatable = false,nullable = false)
     private int roleId;
 
     private Boolean status;
