@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-	<title>Laura's Cuisine</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	
-	<!-- External Resources -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphism Login Form</title>
+    <!-- <link rel="stylesheet" href="./login-styles.css" /> -->
+    <link th:href="@{/css/login-styles.css}" rel="stylesheet">
+    
+  </head>
 
-    <!-- Local CSS -->
-    <link th:href="@{/css/animate.css}" rel="stylesheet">
-    <link th:href="@{/css/owl.carousel.min.css}" rel="stylesheet">
-    <link th:href="@{/css/owl.theme.default.min.css}" rel="stylesheet">
-    <link th:href="@{/css/magnific-popup.css}" rel="stylesheet">
-    <link th:href="@{/css/bootstrap-datepicker.css}" rel="stylesheet">
-    <link th:href="@{/css/jquery.timepicker.css}" rel="stylesheet">
-    <link th:href="@{/css/flaticon.css}" rel="stylesheet">
-    <link th:href="@{/css/style.css}" rel="stylesheet">
-</head>
-<body>
-
-	<div class="wrap">
-		<div class="container">
-        </div>
+  <body>
+    <div class="background">
+      <div class="shapes"></div>
+      <div class="shapes"></div>
     </div>
-
-</body>
-
+    <form>
+      <h3>Login Form</h3>
+      <label for="user"> Username</label>
+      <input
+        type="text"
+        name="user"
+        id="user"
+        placeholder="Enter Username"
+        autocomplete="name"
+      />
+      <label for="psw">Password</label>
+      <input
+        type="password"
+        name="psw"
+        id="psw"
+        placeholder="Enter Password"
+        autocomplete="password"
+      />
+      <button>Login</button>
+      
+    </form>
+  </body>
 </html>
