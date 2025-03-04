@@ -1,36 +1,37 @@
 package com.example.chamudika.models;
 
 import jakarta.persistence.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import java.util.Collection;
 import java.util.List;
 
-
 @Entity
-
 @Table(name = "users")
-
-public class User {
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    
     @Column(name = "name", nullable = false)
     private String name;
-    @Column(name = "email", nullable = false , unique= true)
+    
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
+    
     @Column(name = "password", nullable = false)
     private String password;
-
-    @Column(name = "role_id", insertable = true, updatable = false,nullable = false)
+    
+    @Column(name = "role_id", insertable = true, updatable = false, nullable = false)
     private int roleId;
-
+    
     private Boolean status;
 
-    // Many-to-One relationship with Role
     @ManyToOne
-    @JoinColumn(name = "role_id", referencedColumnName = "id")
+    @JoinColumn(name = "role_id", referencedColumnName = "id", insertable = false, updatable = false)
     private Role role;
 
-    // One-to-Many relationship with Booking
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Booking> bookings;
 
@@ -44,6 +45,36 @@ public class User {
         this.password = password;
         this.roleId = roleId;
         this.status = status;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of(() -> "ROLE_USER"); // You can modify this based on roles
+    }
+
+    @Override
+    public String getUsername() {
+        return email;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return status != null && status;
     }
 
     // Getters and setters
@@ -71,6 +102,7 @@ public class User {
         this.email = email;
     }
 
+    @Override
     public String getPassword() {
         return password;
     }
